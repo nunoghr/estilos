@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18 - Spinners</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg-color: light-dark(#ffffff, #1a1a1a);
+            --text-color: light-dark(#333333, #e0e0e0);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 2rem;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { font-size: 2rem; margin-bottom: 2rem; }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .spinner {
+            width: 2rem;
+            height: 2rem;
+            border: 0.25rem solid light-dark(#e9ecef, #2a2a2a);
+            border-top-color: #007bff;
+            border-radius: 50%;
+            animation: spin 0.75s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spinners</h1>
+
+        <div class="spinner"></div>
+        
+    </div>
+</body>
+</html>

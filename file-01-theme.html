@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 - Tema</title>
+
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --border-color: #dee2e6;
+        }
+
+        :root[data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --border-color: #444444;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 2rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #themeToggle {
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: transform 0.2s;
+        }
+
+        #themeToggle:hover {
+            transform: scale(1.2);
+        }
+
+        .box {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="themeToggle">☀️</button>
+
+    <div class="box">
+        <h2>Teste</h2>
+        <p>bomba</p>
+    </div>
+
+    <script>
+        const html = document.documentElement;
+        const btn = document.getElementById("themeToggle");
+
+        function updateIcon() {
+            const theme = html.getAttribute("data-theme");
+            btn.textContent = theme === "dark" ? "🌙" : "☀️";
+        }
+
+        btn.addEventListener("click", () => {
+            const current = html.getAttribute("data-theme");
+            const next = current === "dark" ? "light" : "dark";
+            html.setAttribute("data-theme", next);
+            updateIcon();
+        });
+
+        updateIcon();
+    </script>
+
+</body>
+</html>

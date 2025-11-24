@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 - Tooltip</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg-color: light-dark(#ffffff, #1a1a1a);
+            --text-color: light-dark(#333333, #e0e0e0);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 32px;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { font-size: 32px; margin-bottom: 32px; }
+
+        #info-opener {
+            background-color: #17a2b8;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .info-tooltip {
+            display: none;
+            background: #007bff;
+            padding: 5px 10px;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 14px;
+            position: absolute;
+            top: 50%;
+            left: 105%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            z-index: 10;
+        }
+
+        #info-opener:hover .info-tooltip {
+            display: block;
+        }
+
+        .forma {
+            padding-left: 12px;
+            clip-path: polygon(
+                100% 0%,
+                100% 100%,
+                5px 100%,
+                5px calc(50% + 5px),
+                0% 50%,
+                5px calc(50% - 5px),
+                5px 0%
+            );
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tooltip</h1>
+
+        <button id="info-opener">
+            informação
+            <div class="info-tooltip forma">
+                Lorem ipsum dolor sit amet
+            </div>
+        </button>
+
+    </div>
+</body>
+</html>

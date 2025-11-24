@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14 - Navbar</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg-color: light-dark(#ffffff, #1a1a1a);
+            --text-color: light-dark(#333333, #e0e0e0);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            background-color: light-dark(#f8f9fa, #2a2a2a);
+            margin-bottom: 16px;
+        }
+
+        .navbar-brand {
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-color);
+            margin-right: 16px;
+        }
+
+        .navbar-nav {
+            display: flex;
+            gap: 16px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 8px;
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
+        .nav-link.active {
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        .nav-link.disabled {
+            color: #6c757d;
+            pointer-events: none;
+        }
+
+        .content {
+            padding: 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 { margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Documentos</a>
+            <a class="nav-link" href="#">Exemplos</a>
+            <a class="nav-link" href="#">Icones</a>
+            <a class="nav-link">Tema</a>
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 - Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf2f8;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            gap: 25px;
+            grid-template-areas: 
+            "card1 card1 card2 card3"
+            "card4 card5 card5 card3";
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: 
+                "card1"
+                "card2"
+                "card3"
+                "card4"
+                "card5";
+            }
+        }
+
+        .card {
+            padding: 25px 30px;
+            border-radius: 8px;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .profile-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+
+        .profile-info h4 {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            font-size: 13px;
+        }
+
+        .purple { background-color: #7541c8; color: white; grid-area: card1; }
+        .gray { background-color: #48556a; color: white; grid-area: card2; }
+        .white { background-color: white; color: #48556a; grid-area: card3; }
+        .white-alt { background-color: white; color: #48556a; grid-area: card4; }
+        .dark { background-color: #19212e; color: white; grid-area: card5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card purple">
+            <div class="card-header">
+                <img src="https://placehold.co/50x50" alt="profile" class="profile-img">
+                <div class="profile-info">
+                    <h4>Daniel Clifford</h4>
+                    <p class="subtitle">Verified Graduate</p>
+                </div>
+            </div>
+            <h3>I received a job offer mid-course, and the subjects I learned were current</h3>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ratione voluptatem architecto, aliquam aspernatur minima earum exercitationem laboriosam et necessitatibus rem quisquam consectetur adipisci temporibus.</p>
+        </div>
+
+        <div class="card gray">
+            <div class="card-header">
+                <img src="https://placehold.co/50x50" alt="profile" class="profile-img">
+                <div class="profile-info">
+                    <h4>Jonathan Walters</h4>
+                    <p class="subtitle">Verified Graduate</p>
+                </div>
+            </div>
+            <h3>The team was very supportive and kept me motivated</h3>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia assumenda quo deleniti voluptas adipisci laborum.</p>
+        </div>
+
+        <div class="card white">
+            <div class="card-header">
+                <img src="https://placehold.co/50x50" alt="profile" class="profile-img">
+                <div class="profile-info">
+                    <h4>Kira Whittle</h4>
+                    <p class="subtitle">Verified Graduate</p>
+                </div>
+            </div>
+            <h3>Such a life-changing experience. Highly recommended!</h3>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dignissimos necessitatibus ipsum cupiditate minima exercitationem quibusdam.</p>
+        </div>
+
+        <div class="card white-alt">
+            <div class="card-header">
+                <img src="https://placehold.co/50x50" alt="profile" class="profile-img">
+                <div class="profile-info">
+                    <h4>Jeanette Harmon</h4>
+                    <p class="subtitle">Verified Graduate</p>
+                </div>
+            </div>
+            <h3>An overall wonderful and rewarding experience</h3>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vitae accusamus.</p>
+        </div>
+
+        <div class="card dark">
+            <div class="card-header">
+                <img src="https://placehold.co/50x50" alt="profile" class="profile-img">
+                <div class="profile-info">
+                    <h4>Patrick Abrams</h4>
+                    <p class="subtitle">Verified Graduate</p>
+                </div>
+            </div>
+            <h3>Awesome teaching support from TAs who did the bootcamp themselves</h3>
+            <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat rem quisquam fugiat maxime nesciunt atque dignissimos error voluptates modi explicabo.</p>
+        </div>
+    </div>
+</body>
+</html>

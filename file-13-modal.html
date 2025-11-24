@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>13 - Modal</title>
+
+<style>
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #fff;
+        color: #000;
+        padding: 32px;
+    }
+
+    .btn {
+        padding: 8px 24px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    dialog[popover] {
+        padding: 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        max-width: 380px;
+        width: 90%;
+    }
+
+    dialog[popover]::backdrop {
+        background-color: rgba(40, 0, 80, 0.25);
+        backdrop-filter: blur(3px);
+    }
+
+    .popover-header {
+        padding: 16px 20px;
+        border-bottom: 1px solid #ccc;
+        font-size: 19.2px;
+        font-weight: bold;
+    }
+
+    .popover-body {
+        padding: 20px;
+        font-size: 15.2px;
+        line-height: 22.4px;
+    }
+
+    .popover-footer {
+        padding: 16px 20px;
+        border-top: 1px solid #ccc;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+    }
+</style>
+</head>
+
+<body>
+
+<button popovertarget="pop" class="btn">Modal de Informação</button>
+
+<dialog popover id="pop">
+    <div class="popover-header">This is a popover</div>
+
+    <div class="popover-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, cum amet illum enim magnam earum! Et nobis ex voluptas officiis nemo totam exercitationem asperiores officia, illum pariatur minus voluptates cumque?</div>
+
+    <div class="popover-footer">
+        <button popovertarget="pop" popovertargetaction="hide" class="btn btn-secondary">Fechar</button>
+    </div>
+</dialog>
+
+</body>
+</html>

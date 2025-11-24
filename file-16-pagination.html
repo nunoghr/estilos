@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>16 - Pagination</title>
+
+<style>
+    :root {
+        color-scheme: light dark;
+        --bg-color: light-dark(#ffffff, #1a1a1a);
+        --text-color: light-dark(#333333, #e0e0e0);
+        --border-color: light-dark(#dee2e6, #444444);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        padding: 32px;
+    }
+
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { font-size: 32px; margin-bottom: 32px; }
+    h2 { margin: 32px 0 16px 0; }
+
+    .pagination {
+        display: flex;
+        list-style: none;
+        gap: 4px;
+        margin: 32px 0;
+    }
+
+    .page-link {
+        display: block;
+        padding: 6px 12px;
+        color: #007bff;
+        text-decoration: none;
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+    }
+
+    .page-link:hover {
+        background-color: light-dark(#e9ecef, #2a2a2a);
+    }
+
+    .page-item a:target {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+    }
+
+    .disabled a {
+        color: #6c757d;
+        pointer-events: none;
+        opacity: 0.6;
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>Pagination</h1>
+
+    <nav aria-label="Navegação de páginas">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link">&laquo;</a>
+            </li>
+
+            <li class="page-item"><a class="page-link" id="page1" href="#page1">1</a></li>
+            <li class="page-item"><a class="page-link" id="page2" href="#page2">2</a></li>
+            <li class="page-item"><a class="page-link" id="page3" href="#page3">3</a></li>
+            <li class="page-item"><a class="page-link" id="page4" href="#page4">...</a></li>
+            <li class="page-item"><a class="page-link" id="page10" href="#page10">10</a></li>
+
+            <li class="page-item">
+                <a class="page-link">&raquo;</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>15 - Navs & Tabs</title>
+
+<style>
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 32px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-rows: auto 1fr;
+    }
+
+    details {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-template-rows: subgrid;
+        grid-column: 1 / -1;
+        grid-row: 1 / span 2;
+        border-bottom: 1px solid lightgray;
+    }
+
+    summary {
+        --tab-order: attr(data-tab-order type(<integer>));
+        grid-column: var(--tab-order);
+        grid-row: 1;
+        display: grid;
+        padding: 1rem;
+        border-bottom: 1px solid lightgray;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    details[open] summary {
+        font-weight: bold;
+        pointer-events: none;
+        border: 1px solid lightgray;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom: none;
+    }
+
+    details::details-content {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        padding: 1rem;
+    }
+
+    details:not([open])::details-content {
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="grid">
+    <details name="tabs" open>
+        <summary data-tab-order="1">Tab1</summary>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Eius molestias repellat error autem.
+        </div>
+    </details>
+
+    <details name="tabs">
+        <summary data-tab-order="2">Tab2</summary>
+        <div>
+            Voluptatibus quam consectetur fuga dolorem praesentium 
+            atque facere nam distinctio.
+        </div>
+    </details>
+
+    <details name="tabs">
+        <summary data-tab-order="3">Tab3</summary>
+        <div>
+            Sapiente ea nulla, reiciendis non harum sed delectus 
+            error laudantium impedit.
+        </div>
+    </details>
+</div>
+
+</body>
+</html>

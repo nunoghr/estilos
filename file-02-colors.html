@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2 - Cores</title>
+<style>
+    :root {
+        --cor-primario: #007bff;
+        --cor-secundario: #6c757d;
+        --cor-sucesso: #28a745;
+        --cor-perigo: #dc3545;
+        --cor-aviso: #ffc107;
+        --cor-informacao: #17a2b8;
+        --cor-claro: #ffffff;
+        --cor-escuro: #1a1a1a;
+    }
+
+    body {
+        font-family: sans-serif;
+        padding: 2rem;
+    }
+
+    .botao {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        margin: 0.25rem;
+    }
+
+    .botao-primario { background-color: var(--cor-primario); }
+    .botao-secundario { background-color: var(--cor-secundario); }
+    .botao-sucesso { background-color: var(--cor-sucesso); }
+    .botao-perigo { background-color: var(--cor-perigo); }
+    .botao-aviso { background-color: var(--cor-aviso); color: #2b333b; }
+    .botao-informacao { background-color: var(--cor-informacao); }
+    .botao-claro { background-color: var(--cor-claro); color: #212529; }
+    .botao-escuro { background-color: var(--cor-escuro); }
+</style>
+</head>
+<body>
+
+<h1>Cores</h1>
+
+<button class="botao botao-primario">Primário</button>
+<button class="botao botao-secundario">Secundário</button>
+<button class="botao botao-sucesso">Sucesso</button>
+<button class="botao botao-perigo">Perigo</button>
+<button class="botao botao-aviso">Aviso</button>
+<button class="botao botao-informacao">Informação</button>
+<button class="botao botao-claro">Claro</button>
+<button class="botao botao-escuro">Escuro</button>
+
+</body>
+</html>

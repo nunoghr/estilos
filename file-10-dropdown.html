@@ -1,0 +1,71 @@
+<nav>
+  <button id="anchor">
+    Toggle Dropdown Menu ▾
+  </button>
+  <ul id="target">
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+  </ul>
+</nav>
+
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+
+  nav {
+    position: relative;
+    display: inline-block;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.25rem;
+    padding: 0;
+    list-style: none;
+    min-width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    display: none; 
+    z-index: 100;
+  }
+
+  ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  ul li a:hover {
+    background-color: #f1f1f1;
+  }
+
+  button:hover + ul, ul:hover {
+    display: block;
+  }
+</style>
