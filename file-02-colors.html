@@ -6,6 +6,12 @@
 <title>2 - Cores</title>
 <style>
     :root {
+        color-scheme: light dark;
+        --bg-color: light-dark(#ffffff, #1a1a1a);
+        --text-color: light-dark(#333333, #e0e0e0);
+    }
+
+    :root {
         --cor-primario: #007bff;
         --cor-secundario: #6c757d;
         --cor-sucesso: #28a745;
@@ -19,6 +25,8 @@
     body {
         font-family: sans-serif;
         padding: 32px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
     }
 
     .botao {

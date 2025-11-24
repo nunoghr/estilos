@@ -19,17 +19,26 @@
 </nav>
 
 <style>
+  :root {
+    color-scheme: light dark;
+    --bg-color: light-dark(#ffffff, #1a1a1a);
+    --text-color: light-dark(#333333, #e0e0e0);
+  }
+  
   .breadcrumb {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
   }
 
   .breadcrumb-item + .breadcrumb-item::before {
     content: "/";
-    padding: 0 0.5rem;
+    padding: 0 8px;
+    color: var(--text-color);
   }
 
   .breadcrumb-item a {
